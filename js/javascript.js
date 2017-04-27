@@ -83,15 +83,16 @@ for (i = 0; i < close.length; i++) {
   }
 }*/
 
+
 // esta función agrega un check cuando se marca una tarea (si ya está hecha)
 //document.querySelector selecciona el primer elemento y lo tacha, luego el usuario tacha el resto de tareas
-/*
+
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
   }
-}, false);*/  
+}, false); 
 
 // agregar nuevo elemento a la lista
 function agregarTarea() {
@@ -104,17 +105,19 @@ function agregarTarea() {
   } else {
     document.getElementById("myUL").appendChild(li); //si agrega una nueva tarea esta se agrega al final de la lista
   }
-  document.getElementById("myInput").value = "";
+   }
 
-  
-  
+ for (i=0; i < 10;i++)
+{
+ listaTareas.push(arr[i])
 }
 
-
+listaTareas.forEach(function(el){
+  document.write("<li>" + el.userId + el.id + " " + el.title + "/ " + el.completed + "</li>");
+  });
  /*cript>
-        //Escribe aquí tu código Javascript
-        var cajaDondeVoyAGuardar = document.getElementById("num_enlaces");
-        var todosLosA = document.getElementsByTagName("a");
+        var cajaDondeVoyAGuardar = document.getElementById("myUL");
+        var todosLosA = document.getElementsByTagName("");
         var totalA = todosLosA.length;
         cajaDondeVoyAGuardar.innerHTML  = totalA;
     </script>*/
