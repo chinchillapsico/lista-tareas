@@ -70,4 +70,51 @@ var listaTareas = [
     "id": 12,
     "title": "ipsa repellendus fugit nisi",
     "completed": true
-  },
+  }];
+  
+
+// Click on a close button to hide the current list item
+/*r close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}*/
+
+// esta función agrega un check cuando se marca una tarea (si ya está hecha)
+//document.querySelector selecciona el primer elemento y lo tacha, luego el usuario tacha el resto de tareas
+/*
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);*/  
+
+// agregar nuevo elemento a la lista
+function agregarTarea() {
+  var li = document.createElement("li");
+  var nuevaTarea = document.getElementById("myInput").value;//variable del nuevo valor a ingresar
+  var t = document.createTextNode(nuevaTarea);//con esta variable creo un texto para agregar a la lista
+  li.appendChild(t);// agrego el nuevo elemento a  la lista con appendChild (al nodo padre)
+  if (nuevaTarea === '') { //si no se ingresa una nueva tarea genero una alerta
+    alert("¡Debes agregar una nueva tarea!");
+  } else {
+    document.getElementById("myUL").appendChild(li); //si agrega una nueva tarea esta se agrega al final de la lista
+  }
+  document.getElementById("myInput").value = "";
+
+  
+  
+}
+
+
+ /*cript>
+        //Escribe aquí tu código Javascript
+        var cajaDondeVoyAGuardar = document.getElementById("num_enlaces");
+        var todosLosA = document.getElementsByTagName("a");
+        var totalA = todosLosA.length;
+        cajaDondeVoyAGuardar.innerHTML  = totalA;
+    </script>*/

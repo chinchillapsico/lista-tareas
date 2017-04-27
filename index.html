@@ -3,29 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Lista de tareas</title>
+	<link rel="stylesheet" href="css/estilo.css">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 </head>
 <body>
 	<!-- Comentario de HTML-->
 	<h1>Lista de tareas</h1>
-	<div id="contenedor-gatos">
-		
+	<div id="myDIV" class="header">
+  
+  <input type="text" id="myInput" placeholder="cosas por hacer...">
+  <span onclick="agregarTarea()" class="addBtn">Añadir tarea</span>
+</div>
 
-	</div>
-	<a href="#" onclick="cambiarGato()">SI</a>
-	<a href="#" onclick="cambiarGato()">NO</a>
+<ul id="myUL">
+  <li></li>
+  <li>Meet George</li>
+  <li>Buy eggs</li>
+  <li>Read a book</li>
+  <li>Organize office</li>
+</ul>
 
-	<hr>
-
-	<label for="email">Email</label>
-	<input type="email" id="email">
-
-	<a href="#" id="getEmail" onclick="obtenerEmail()">
-		Click Me!
-	</a>
-	
-	<div class="email-list"></div>
-
-	<script src="js/data.js"></script>
 	<script src="js/javascript.js"></script>
+	<style src="css/estilo.css"></style>
 </body>
 </html>
